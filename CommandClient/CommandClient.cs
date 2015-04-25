@@ -327,6 +327,8 @@ namespace Proshot.CommandClient
                 //CommandType
                 byte[] buffer = new byte[4];
                 buffer = BitConverter.GetBytes((int)cmd.CommandType);
+
+				
                 this.networkStream.Write(buffer, 0, 4);
                 this.networkStream.Flush();
                 //Command Target
